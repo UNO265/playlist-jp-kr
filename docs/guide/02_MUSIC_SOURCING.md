@@ -28,7 +28,7 @@
 | `title` | 곡 제목(표시용) |
 | `line` | `JP` / `KR` / `BOTH` |
 | `source` | `elevenlabs` / `collab:이름` / `self` |
-| `plan` | 생성 당시 플랜 (`suno-pro`, `eleven-creator` 등) |
+| `plan` | 생성 당시 플랜 (`eleven-creator`, `eleven-pro` 등) |
 | `created` | 생성일 YYYY-MM-DD |
 | `rights` | `cleared` / `hold` / `rejected` |
 | `rights_note` | 근거(약관 확인일, 계약서 파일명 등) |
