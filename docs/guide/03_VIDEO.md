@@ -7,6 +7,7 @@
 - 이미지 출처도 권리 확인(직접 제작, 상업 이용 가능한 생성 도구, 라이선스 확보 사진). 기존 애니·영화 캡처 금지.
 - 이전 영상과 같은 그림 재사용 금지. 시리즈 통일감은 로고·글자 위치로 낸다.
 - 파일: `assets/visuals/PLxxx.png` 또는 `PLxxx.mp4`.
+- 직접 그리는 일러스트는 `assets/visuals/src/PLxxx.svg` 로 만들고 `NODE_PATH=$(npm root -g) node scripts/render_svg.js assets/visuals/src/PLxxx.svg assets/visuals/PLxxx.png` 로 렌더링(Playwright 필요). 권리 문제 없음.
 
 ## 2. 빌드
 

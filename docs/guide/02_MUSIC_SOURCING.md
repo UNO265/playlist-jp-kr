@@ -40,3 +40,14 @@
 ## 4. 프롬프트
 
 ElevenLabs용 프롬프트 세트: `prompts/elevenlabs-prompts.md`. 생성에 쓴 프롬프트는 `rights_note`나 별도 메모에 남긴다(같은 톤 재생성용).
+
+## 5. 생성 자동화 (ElevenLabs API)
+
+`scripts/generate_tracks.py` 가 `playlists/PLxxx/design.md` 의 프롬프트로 곡을 만든다. 키는 환경 변수 `ELEVENLABS_API_KEY`(클라우드 환경 설정에 등록, 채팅에 붙여넣지 않는다).
+
+1. 후보 생성: `python3 scripts/generate_tracks.py playlists/PL001/design.md --takes 2` → `tracks/audio/candidates/T0001_1.mp3` … (git 제외, 생성 기록은 `tracks/generation-log.csv`)
+2. 사용자가 듣고 고른다.
+3. 확정: `--pick T0001=2 --title "곡 제목" --plan <플랜>` → `tracks/audio/T0001.mp3`(git에 커밋) + 대장 등록(`rights=hold`)
+4. 플랜 약관의 상업 이용 범위를 확인하면 `rights=cleared` 로 바꾼다.
+
+음원은 MP3 192kbps(곡당 약 6MB)로 받아 확정본만 커밋한다.
