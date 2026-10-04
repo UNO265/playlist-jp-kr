@@ -6,9 +6,8 @@
 
 | 출처 | 사용 | 조건 |
 |---|---|---|
-| **기존 Suno 곡** | 조건부 O | **유료 플랜(Pro/Premier) 가입 중 생성한 곡만.** 무료 플랜 생성곡은 상업 이용 불가 → `hold`. 생성일·플랜을 확인할 수 없으면 `hold` |
+| **Suno (기존·신규 모두)** | X | 사용자 결정(2026-10-04): Suno 음원은 쓰지 않는다 |
 | **ElevenLabs Music** | O (주력 후보) | 유료 플랜의 상업 이용 범위 확인. 생성 시 플랜·날짜 기록 |
-| Suno 신규 | △ | 유료 플랜이어도 다운로드 월 20/60곡 제한 → 보조용 |
 | Udio | X | 플랫폼 밖 반출 제한 |
 | 음원 라이브러리(Epidemic·Artlist 등) | X | 대부분 음악 중심 영상·컴필레이션 금지 |
 | **인디 프로듀서 의뢰·협업** | O (장기) | 서면 계약: 유튜브 수익화·Content ID·크레디트 표기 범위 명시 |
@@ -28,7 +27,7 @@
 | `id` | `T0001` 형식, 파일명과 같게 (`tracks/audio/T0001.wav`) |
 | `title` | 곡 제목(표시용) |
 | `line` | `JP` / `KR` / `BOTH` |
-| `source` | `suno` / `elevenlabs` / `collab:이름` / `self` |
+| `source` | `elevenlabs` / `collab:이름` / `self` |
 | `plan` | 생성 당시 플랜 (`suno-pro`, `eleven-creator` 등) |
 | `created` | 생성일 YYYY-MM-DD |
 | `rights` | `cleared` / `hold` / `rejected` |
@@ -38,12 +37,6 @@
 | `mood` | 자유 태그 `night;drive;rain` |
 | `last_used` | 마지막 사용 플리 ID |
 
-## 4. 기존 Suno 곡 정리 순서
-
-1. Suno 계정의 결제 이력으로 **유료 기간**을 확인한다.
-2. 곡별 생성일이 유료 기간 안이면 `cleared`, 아니면 `hold`.
-3. 이미 업로드한 영상에 쓴 곡 중 `hold`가 있으면 사용자에게 보고한다(영상 처리 방침은 사용자가 정함).
-
-## 5. 프롬프트
+## 4. 프롬프트
 
 ElevenLabs용 프롬프트 세트: `prompts/elevenlabs-prompts.md`. 생성에 쓴 프롬프트는 `rights_note`나 별도 메모에 남긴다(같은 톤 재생성용).
