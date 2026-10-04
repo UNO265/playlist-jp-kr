@@ -1,0 +1,5 @@
+out/
+tracks/audio/*
+!tracks/audio/.gitkeep
+__pycache__/
+.DS_Store

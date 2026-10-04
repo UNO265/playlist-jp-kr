@@ -1,0 +1,16 @@
+# playlists/PLxxx/playlist.yaml 양식
+id: PL001
+line: JP                     # JP / KR
+concept: 深夜2時、首都高を流すシティポップ
+title: "【Playlist】深夜の首都高、ひとりで流すシティポップ | City Pop Night Drive"
+curation_note: |
+  前半は街を抜けるまでの軽いグルーヴ、中盤で湾岸線に出てテンポを上げ、
+  最後は夜明け前のバラードで静かに降りていく流れにしました。
+visual: assets/visuals/PL001.png   # .png/.jpg(정지) 또는 .mp4(루프)
+crossfade: 3                 # 곡 사이 크로스페이드(초)
+hashtags: ["#citypop", "#シティポップ", "#playlist"]
+tracks:
+  - id: T0001
+    note: 街に出る一曲目。ネオンの雰囲気を一番よく表す
+  - id: T0002
+    note: テンポを少し上げる
